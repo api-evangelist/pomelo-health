@@ -1,0 +1,135 @@
+aid: pomelo-health
+name: Pomelo Health
+review:
+  question: >-
+    Does Pomelo Health expose a documented public developer API, an HL7 FHIR
+    CapabilityStatement, or a SMART-on-FHIR surface?
+  answer: false
+  date: '2026-07-24'
+  reviewer: API Evangelist
+findings:
+  summary: |
+    Pomelo Health (formerly Chronometriq) is a Canadian patient-engagement
+    software company operating within the TELUS Health ecosystem. It does NOT
+    publish a public developer portal, a documented REST/OpenAPI, or any public
+    HL7 FHIR CapabilityStatement / SMART-on-FHIR configuration. The product is a
+    clinic-facing EMR add-on (online booking, SMS/voice/email appointment
+    reminders, digital intake eForms, telemedicine, secure messaging, patient
+    broadcasts, patient portal) that integrates with TELUS Health EMRs (Accuro,
+    Medesync, TELUS CHR). Third-party connectivity is achieved through those
+    underlying EMR partner APIs, not through a Pomelo-hosted API. Multiple
+    independent sources confirm Pomelo does not offer an open third-party API.
+    This is an honest identity stub: gated, partner-only integration model with
+    no public/self-serve API surface to harvest.
+  homeMarket: Canada
+  developerPortal:
+    confirmedUrl: null
+    status: none-found
+    probed:
+      - url: https://developer.pomelohealth.com/
+        result: DNS NXDOMAIN (getaddrinfo ENOTFOUND) — no developer subdomain
+      - url: https://www.pomelohealth.com/
+        result: >-
+          Live host (primary domain); TLS handshake reached the origin but the
+          WAF returned a TLS internal-error alert to non-browser clients. No
+          developer/API/FHIR link surfaced in indexed content.
+      - url: https://api.pomelohealth.com/
+        result: no resolvable/confirmed public API host
+      - url: https://fhir.pomelohealth.com/
+        result: no resolvable/confirmed FHIR host
+      - url: https://docs.pomelohealth.com/
+        result: no resolvable/confirmed docs host
+      - url: https://www.pomelohealth.io/
+        result: live marketing site (product pages); no developer/API/FHIR docs
+      - url: https://www.pomelohealth.ca/
+        result: live marketing site; no developer/API/FHIR docs
+  fhirCapabilityStatement:
+    captured: false
+    version: null
+    resources: []
+    note: >-
+      No <fhir-base>/metadata CapabilityStatement and no
+      /.well-known/smart-configuration or /.well-known/openid-configuration
+      could be located on any Pomelo Health host. Pomelo is a patient-engagement
+      layer, not a FHIR data-access/interoperability platform; FHIR conformance
+      (pan-Canadian CA Core / CA Baseline via Canada Health Infoway, or US Core,
+      UK Core, AU Core, Da Vinci, CARIN) is not applicable to a captured Pomelo
+      surface because no FHIR surface is published.
+  downloadableSpecs:
+    count: 0
+    provenance: >-
+      No OpenAPI/Swagger (/openapi.json, /openapi.yaml, /swagger.json,
+      /v1/openapi.json, /api-docs, /spec) and no FHIR metadata JSON were found or
+      parsed. Nothing saved verbatim; openapi/ and fhir/ directories are absent.
+  authModel:
+    scheme: none-public
+    smartOnFhir: false
+    scopes: []
+    note: >-
+      No public authentication surface is documented for a Pomelo-hosted API. No
+      SMART-on-FHIR OAuth2 (patient/*.read, system/*.rw), OAuth2
+      client-credentials, API key, or mTLS scheme is published for third-party
+      developers. Access is partner/EMR-mediated.
+  standardsConformance:
+    usCore: false
+    ukCore: false
+    auCore: false
+    caCore: unknown
+    daVinci: false
+    carin: false
+    note: >-
+      No conformance claims verifiable; no machine-readable contract published.
+      As a Canadian vendor, any interoperability would flow through Canada Health
+      Infoway pan-Canadian FHIR (CA Core / CA Baseline) at the EMR layer, not at
+      Pomelo's product layer.
+  access:
+    model: gated
+    selfServe: false
+    note: >-
+      No self-serve developer signup or sandbox. Integration is achieved via
+      TELUS Health / QHR EMR partnerships (Accuro, Medesync, TELUS CHR).
+  transports:
+    - protocol: REST
+      scheme: https
+      documented: false
+      note: No public REST API is documented by Pomelo Health.
+    - protocol: FHIR
+      scheme: https
+      documented: false
+      note: No public FHIR base URL or CapabilityStatement is documented.
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket surface documented.
+sources:
+  - url: https://www.pomelohealth.com/
+    type: Website
+    note: Pomelo Health — Patient Engagement Software (primary domain).
+  - url: https://www.pomelohealth.io/ca-en/patient-engagement
+    type: ProductPage
+    note: Canadian patient-engagement product overview.
+  - url: https://www.telus.com/en/health/health-professionals/clinics/emr-add-ons/pomelo
+    type: PartnerPage
+    note: TELUS Health lists Pomelo as an EMR add-on integrating with Accuro and Medesync (HTTP 403 to bots; page exists).
+  - url: https://www.wisevu.com/blog/pomelo-health-canadian-telemedicine-software/
+    type: Review
+    note: Independent review confirming Pomelo does not provide a public/open API or developer portal.
+  - url: https://ideas.qhrtech.com/ideas/ACC-I-7997
+    type: Reference
+    note: QHR/Accuro product-ideas thread on Pomelo integration via the EMR side.
+  - url: https://www.crunchbase.com/organization/chronometriq-748d
+    type: CompanyProfile
+    note: Pomelo Health (formerly Chronometriq) company/funding profile.
+actions:
+  openapiHarvested: false
+  fhirCaptured: false
+  specsSaved: 0
+  reason: >-
+    No public developer portal, no documented REST/OpenAPI, and no public FHIR
+    CapabilityStatement or SMART-on-FHIR configuration exist for Pomelo Health.
+    Nothing could be harvested verbatim without fabrication, so the profile is an
+    honest identity stub (built-stub) for a gated, partner-only integration
+    model. Home market: Canada.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
