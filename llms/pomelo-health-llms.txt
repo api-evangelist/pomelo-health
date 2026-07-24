@@ -1,0 +1,34 @@
+# Pomelo Health
+
+> Pomelo Health (formerly Chronometriq, founded 2012, headquartered in Montreal with offices in Boston and Toronto) is a Canadian patient-engagement software company operating within the TELUS Health ecosystem. Its cloud platform helps medical clinics reduce no-shows and modernize the front-desk experience with online booking/e-booking, automated SMS/voice/email appointment reminders, digital intake eForms, telemedicine, secure two-way messaging, patient broadcasts, and a patient portal. Pomelo ships as an EMR add-on that syncs with TELUS Health EMRs — Accuro, Medesync, and TELUS CHR — rather than as an open integration platform.
+
+## API posture
+
+As of 2026-07-24, Pomelo Health publishes **no public developer portal, no documented REST/OpenAPI, and no public HL7 FHIR CapabilityStatement or SMART-on-FHIR configuration**. The `api.`, `developer.`, and `docs.` subdomains of pomelohealth.com do not resolve (NXDOMAIN). Third-party connectivity is achieved through the underlying TELUS Health EMR partner APIs (for example the Accuro REST API), not through a Pomelo-owned public API. This entry is an honest identity profile for a company with a gated, partner-only integration model.
+
+## Product surface (not a public API)
+
+- Online booking / e-booking (eBooking)
+- Automated appointment reminders (SMS, voice, email)
+- Digital intake / eForms
+- Telemedicine / virtual visits
+- Secure two-way patient messaging and broadcasts
+- Patient portal
+
+## EMR integrations (via partner APIs, not a Pomelo API)
+
+- Accuro EMR (TELUS Health) — Accuro exposes its own REST API
+- Medesync (TELUS Health)
+- TELUS CHR
+- Med Access, PS Suite (TELUS Health family)
+
+## Links
+
+- Website: https://www.pomelohealth.com/
+- Canada site: https://www.pomelohealth.io/ca-en/
+- Support / Help Center: https://support.pomelohealth.io/
+- Privacy Policy: https://www.pomelohealth.com/privacy-policy
+
+## APIs.json
+
+- https://raw.githubusercontent.com/api-evangelist/pomelo-health/refs/heads/main/apis.yml

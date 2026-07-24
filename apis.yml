@@ -31,13 +31,20 @@ tags:
 - Digital Health
 created: '2026-07-24'
 modified: '2026-07-24'
+# enrichment round 2026-06-20 (2026-07-24 run): domain-security probed; llms.txt generated; privacy-policy wired. No public OpenAPI/GraphQL/MCP/FHIR surface exists (api./developer./docs. subdomains NXDOMAIN; partner-only integration model).
 specificationVersion: '0.19'
 apis: []
 common:
+- type: DomainSecurity
+  url: security/pomelo-health-domain-security.yml
+- type: LLMsTxt
+  url: llms/pomelo-health-llms.txt
 - type: Website
   url: https://www.pomelohealth.com/
 - type: Support
   url: https://support.pomelohealth.io/
+- type: PrivacyPolicy
+  url: https://www.pomelohealth.com/privacy-policy
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
