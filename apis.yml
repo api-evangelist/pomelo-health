@@ -52,6 +52,7 @@ tags:
 - EMR Integration
 - TELUS Health
 - Digital Health
+- Scheduling
 created: '2026-07-24'
 modified: '2026-07-24'
 # enrichment round 2026-06-20 (2026-07-24 run): domain-security probed; llms.txt generated; privacy-policy wired. No public OpenAPI/GraphQL/MCP/FHIR surface exists (api./developer./docs. subdomains NXDOMAIN; partner-only integration model).
