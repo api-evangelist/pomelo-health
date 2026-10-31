@@ -1,4 +1,4 @@
-# Pomelo Health (pomelo-health)
+# Pomelo Health
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,48 +64,81 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Pomelo Health (formerly Chronometriq, founded 2012, headquartered in Montreal with offices in Boston and Toronto) is a Canadian patient-engagement software company operating within the TELUS Health ecosystem. Its cloud platform helps medical clinics reduce no-shows and modernize the front-desk experience with online booking/e-booking, automated SMS/voice/email appointment reminders, digital intake eForms, telemedicine, secure two-way messaging, patient broadcasts, and a patient portal.
+Pomelo Health (formerly Chronometriq, founded 2012, headquartered in Montreal with offices in Boston and Toronto) is a Canadian patient-engagement software company operating within the TELUS Health ecosystem. Its cloud platform helps medical clinics reduce no-shows and modernize the front-desk experience with online booking/e-booking, automated SMS/voice/email appointment reminders, digital intake eForms, telemedicine, secure two-way messaging, patient broadcasts, and a patient portal. Pomelo ships as an EMR add-on that syncs with TELUS Health EMRs — Accuro, Medesync, and TELUS CHR — rather than as an open integration platform. As of this review Pomelo Health publishes NO public developer portal, NO documented REST/OpenAPI, and NO public HL7 FHIR CapabilityStatement or SMART-on-FHIR surface; third-party connectivity is achieved through the underlying EMR partner APIs, so this profile is an honest identity stub for a company with a gated, partner-only integration model. Home market: Canada.
 
-Pomelo ships as an EMR add-on that syncs with TELUS Health EMRs — Accuro, Medesync, and TELUS CHR — rather than as an open integration platform.
+**Areas:** Healthcare · Canada · Patient Engagement · Telehealth · Appointment Scheduling · Patient Portal · eForms · EMR Integration · TELUS Health · Digital Health · Scheduling
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/pomelo-health/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/pomelo-health/refs/heads/main/apis.yml)
+## Pomelo Health on APIs.io
 
-## API / FHIR Posture
+Everything profiled for Pomelo Health is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/pomelo-health/](https://apis.io/providers/pomelo-health/)** — or go straight to one of the APIs or properties below.
 
-As of this review (2026-07-24), Pomelo Health publishes **no public developer portal, no documented REST/OpenAPI, and no public HL7 FHIR CapabilityStatement or SMART-on-FHIR configuration**. `developer.pomelohealth.com` does not resolve, and no `api.` / `fhir.` / `docs.` developer subdomain or `/developers` path could be confirmed. Multiple independent sources confirm Pomelo does not offer an open third-party API; integrations are delivered through the underlying TELUS Health EMR partners, each of which exposes its own API (for example, the Accuro REST API). This repository is therefore an honest identity stub for a company with a gated, partner-only integration model.
+### Published properties
 
-## Home Market
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-- Canada (province-fragmented healthcare, coordinated federally by Canada Health Infoway / pan-Canadian FHIR)
+#### Security (1)
 
-## Tags
+Authentication, trust centre, and vulnerability disclosure.
 
-- Healthcare
-- Canada
-- Patient Engagement
-- Telehealth
-- Appointment Scheduling
-- Patient Portal
-- eForms
-- EMR Integration
-- TELUS Health
-- Digital Health
+- [Pomelo Health Domain Security](https://apis.io/security/pomelo-health/pomelo-health-domain-security/)
 
-## Timestamps
+## Where to find this API
 
-- **Created:** 2026-07-24
-- **Modified:** 2026-07-24
-
-## APIs
-
-None documented publicly. Product surface (online booking, appointment reminders, eForms/intake, telemedicine, secure messaging, patient portal) is delivered as an EMR add-on, not as a public API. No REST/OpenAPI or FHIR CapabilityStatement was harvested.
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.pomelohealth.com/)
 - [Support](https://support.pomelohealth.io/)
+- [Privacy policy](https://www.pomelohealth.com/privacy-policy)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 6.2** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 2.4 |
+| Access clarity | 5.3 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 6.3** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/pomelo-health/](https://apis.io/providers/pomelo-health/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Pomelo Health: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/pomelo-health/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
